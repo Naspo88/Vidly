@@ -201,6 +201,26 @@
     <Compile Include="Migrations\201901181436169_ApplyAnnotation.Designer.cs">
       <DependentUpon>201901181436169_ApplyAnnotation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901241547546_addingNameToMembershipType.cs" />
+    <Compile Include="Migrations\201901241547546_addingNameToMembershipType.Designer.cs">
+      <DependentUpon>201901241547546_addingNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241603441_CorrectionOnNameInDatabase.cs" />
+    <Compile Include="Migrations\201901241603441_CorrectionOnNameInDatabase.Designer.cs">
+      <DependentUpon>201901241603441_CorrectionOnNameInDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241604026_AddNamesToMembershipTypes.cs" />
+    <Compile Include="Migrations\201901241604026_AddNamesToMembershipTypes.Designer.cs">
+      <DependentUpon>201901241604026_AddNamesToMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241614130_AddPropertyBirthdayToCustomerModel.cs" />
+    <Compile Include="Migrations\201901241614130_AddPropertyBirthdayToCustomerModel.Designer.cs">
+      <DependentUpon>201901241614130_AddPropertyBirthdayToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241614421_PopulateRobertoMinghiBirthday.cs" />
+    <Compile Include="Migrations\201901241614421_PopulateRobertoMinghiBirthday.Designer.cs">
+      <DependentUpon>201901241614421_PopulateRobertoMinghiBirthday.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -306,6 +326,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901181436169_ApplyAnnotation.resx">
       <DependentUpon>201901181436169_ApplyAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241547546_addingNameToMembershipType.resx">
+      <DependentUpon>201901241547546_addingNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241603441_CorrectionOnNameInDatabase.resx">
+      <DependentUpon>201901241603441_CorrectionOnNameInDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241604026_AddNamesToMembershipTypes.resx">
+      <DependentUpon>201901241604026_AddNamesToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241614130_AddPropertyBirthdayToCustomerModel.resx">
+      <DependentUpon>201901241614130_AddPropertyBirthdayToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241614421_PopulateRobertoMinghiBirthday.resx">
+      <DependentUpon>201901241614421_PopulateRobertoMinghiBirthday.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
