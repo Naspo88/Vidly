@@ -5,52 +5,40 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private static List<Movie> _movies = new List<Movie>
+        private ApplicationDbContext _context;
+
+        public MoviesController()
         {
-            new Movie { Name = "Shrek", Id = 1 },
-            new Movie { Name = "Wall-e", Id = 2 }
-        };
-
-        // GET: Movies/Random
-        public ActionResult Random()
-        {
-            var movie = new Movie() { Name = "Shrek" };
-            var customers = new List<Customer>
-            {
-                new Customer { Name = "Person1" },
-                new Customer { Name = "Person2" }
-            };
-
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-            return View(viewModel);
+            _context = new ApplicationDbContext();
         }
 
-        // GET: Movies/Edit/{int}
-        public ActionResult Edit(int id)
+        protected override void Dispose(bool disposing)
         {
-            return Content("Id =" + id);
+            _context.Dispose();
         }
 
         // GET: Movies
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Index()
         {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            return View(movies); ;
+        }
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
+        // GET: Movies/Details/{id}
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(c => c.Id == id);
 
-            return View(_movies); ;
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie);
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
