@@ -237,6 +237,10 @@
     <Compile Include="Migrations\201901311722256_nullabelDates.Designer.cs">
       <DependentUpon>201901311722256_nullabelDates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902111710223_moviemodel.cs" />
+    <Compile Include="Migrations\201902111710223_moviemodel.Designer.cs">
+      <DependentUpon>201902111710223_moviemodel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -244,6 +248,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\MinMembershipAge.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -374,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901311722256_nullabelDates.resx">
       <DependentUpon>201901311722256_nullabelDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902111710223_moviemodel.resx">
+      <DependentUpon>201902111710223_moviemodel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
