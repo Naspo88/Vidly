@@ -16,6 +16,8 @@ namespace Vidly.Dtos
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }
 
+        public GenreDto Genre { get; set; }
+
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dddd, MMMM dd, yyyy}")]
         [Required]
         public DateTime? ReleaseDate { get; set; }

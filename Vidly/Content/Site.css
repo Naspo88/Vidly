@@ -18,3 +18,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+th, td {
+    border: 1px solid #ccc !important;
+}
+
+.v-margins {
+    margin: 10px 0;
+}
