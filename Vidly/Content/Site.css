@@ -26,3 +26,11 @@ th, td {
 .v-margins {
     margin: 10px 0;
 }
+
+label.error {
+    color: red;
+}
+
+input.error {
+    border: 1px solid red;
+}
